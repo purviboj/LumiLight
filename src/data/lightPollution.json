@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Downtown Los Angeles",
+    "latitude": 34.0522,
+    "longitude": -118.2437,
+    "intensity": 89,
+    "year": 2024
+  },
+  {
+    "id": 2,
+    "name": "Phoenix Metro",
+    "latitude": 33.4484,
+    "longitude": -112.074,
+    "intensity": 78,
+    "year": 2023
+  },
+  {
+    "id": 3,
+    "name": "Denver Outskirts",
+    "latitude": 39.7392,
+    "longitude": -104.9903,
+    "intensity": 54,
+    "year": 2021
+  },
+  {
+    "id": 4,
+    "name": "Rural Montana Basin",
+    "latitude": 46.8797,
+    "longitude": -110.3626,
+    "intensity": 21,
+    "year": 2019
+  },
+  {
+    "id": 5,
+    "name": "Austin North",
+    "latitude": 30.2672,
+    "longitude": -97.7431,
+    "intensity": 64,
+    "year": 2022
+  },
+  {
+    "id": 6,
+    "name": "Miami Coastline",
+    "latitude": 25.7617,
+    "longitude": -80.1918,
+    "intensity": 83,
+    "year": 2025
+  },
+  {
+    "id": 7,
+    "name": "Appalachian Dark Zone",
+    "latitude": 37.271,
+    "longitude": -81.221,
+    "intensity": 29,
+    "year": 2017
+  },
+  {
+    "id": 8,
+    "name": "Chicago Suburban Ring",
+    "latitude": 41.8781,
+    "longitude": -87.6298,
+    "intensity": 72,
+    "year": 2020
+  },
+  {
+    "id": 9,
+    "name": "New Mexico Plateau",
+    "latitude": 34.5199,
+    "longitude": -105.8701,
+    "intensity": 18,
+    "year": 1998
+  },
+  {
+    "id": 10,
+    "name": "Seattle Urban Core",
+    "latitude": 47.6062,
+    "longitude": -122.3321,
+    "intensity": 67,
+    "year": 2015
+  }
+]
