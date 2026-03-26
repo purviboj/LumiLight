@@ -1,0 +1,20 @@
+[
+  {
+    "id": "report-001",
+    "lat": 34.0522,
+    "lng": -118.2437,
+    "lightType": "streetlight",
+    "timestamp": "2025-03-11T03:20:00Z",
+    "photo": "",
+    "notes": "Lamp glare spilling into apartments."
+  },
+  {
+    "id": "report-002",
+    "lat": 40.7128,
+    "lng": -74.006,
+    "lightType": "commercial lighting",
+    "timestamp": "2025-03-12T01:05:00Z",
+    "photo": "",
+    "notes": "Billboard lights on all night."
+  }
+]

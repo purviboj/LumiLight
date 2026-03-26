@@ -1,0 +1,35 @@
+[
+  {
+    "id": "obs-001",
+    "lat": 35.7796,
+    "lng": -78.6382,
+    "bortle": 6,
+    "cloudCover": "Partly cloudy",
+    "visibleStars": 25,
+    "timestamp": "2025-03-10T02:15:00Z",
+    "photo": "",
+    "notes": "Urban glow toward west."
+  },
+  {
+    "id": "obs-002",
+    "lat": 44.0582,
+    "lng": -121.3153,
+    "bortle": 3,
+    "cloudCover": "Clear",
+    "visibleStars": 120,
+    "timestamp": "2025-03-11T04:45:00Z",
+    "photo": "",
+    "notes": "Milky Way visible overhead."
+  },
+  {
+    "id": "obs-003",
+    "lat": 29.7604,
+    "lng": -95.3698,
+    "bortle": 7,
+    "cloudCover": "Hazy",
+    "visibleStars": 12,
+    "timestamp": "2025-03-12T03:30:00Z",
+    "photo": "",
+    "notes": "Only brightest stars visible."
+  }
+]

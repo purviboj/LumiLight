@@ -1,22 +1,30 @@
 import { useState } from 'react';
 import AuthPage from './components/AuthPage.jsx';
-import GeminiInsights from './components/GeminiInsights.jsx';
+import CitizenScienceLab from './components/CitizenScienceLab.jsx';
+import EnergyImpactAnalyzer from './components/EnergyImpactAnalyzer.jsx';
 import HistoricalTimelineSlider from './components/HistoricalTimelineSlider.jsx';
 import LandingGlobe from './components/LandingGlobe.jsx';
 import LightPollutionPage from './components/LightPollutionPage.jsx';
 import LightScoreCard from './components/LightScoreCard.jsx';
+import LightingReporter from './components/LightingReporter.jsx';
 import MapView from './components/MapView.jsx';
+import NightSkyForecast from './components/NightSkyForecast.jsx';
 import RestoreNightToggle from './components/RestoreNightToggle.jsx';
 import WelcomeScreen from './components/WelcomeScreen.jsx';
+import WildlifeImpactMap from './components/WildlifeImpactMap.jsx';
 import useGeolocation from './hooks/useGeolocation.js';
 
 const MIN_YEAR = 1990;
 const MAX_YEAR = 2025;
 const APP_TABS = [
   { id: 'map', label: 'Sky Map' },
-  { id: 'snapshot', label: 'Local Snapshot' },
   { id: 'timeline', label: 'Historical Timeline' },
-  { id: 'light-pollution', label: 'Light Pollution' }
+  { id: 'light-pollution', label: 'The Science' },
+  { id: 'citizen-science', label: 'Field Reports' },
+  { id: 'lighting-reporter', label: 'Flag a Light' },
+  { id: 'energy-impact', label: 'Energy Footprint' },
+  { id: 'wildlife-impact', label: 'Wildlife Impact Map' },
+  { id: 'night-forecast', label: 'Night Sky Forecast' }
 ];
 
 function App() {
@@ -70,38 +78,6 @@ function App() {
       );
     }
 
-    if (activeTab === 'snapshot') {
-      return (
-        <section className="mx-auto grid w-full max-w-5xl gap-4 lg:grid-cols-2">
-          <LightScoreCard
-            userPosition={position}
-            selectedYear={selectedYear}
-            loadingLocation={loading}
-            locationError={error}
-            initialLocationQuery={entryLocationQuery}
-            selectedLocationOverride={selectedLocationOverride}
-            onSelectedLocationChange={setSelectedLocationOverride}
-          />
-          <RestoreNightToggle
-            enabled={restoreNightMode}
-            onToggle={setRestoreNightMode}
-            userPosition={position}
-            selectedYear={selectedYear}
-            loadingLocation={loading}
-            locationError={error}
-          />
-          <div className="lg:col-span-2">
-            <GeminiInsights
-              userPosition={position}
-              selectedYear={selectedYear}
-              restoreNightMode={restoreNightMode}
-              selectedLocationOverride={selectedLocationOverride}
-            />
-          </div>
-        </section>
-      );
-    }
-
     if (activeTab === 'timeline') {
       return (
         <section className="mx-auto flex min-h-[calc(100vh-154px)] w-full max-w-7xl flex-col gap-4 lg:flex-row">
@@ -129,6 +105,26 @@ function App() {
       );
     }
 
+    if (activeTab === 'citizen-science') {
+      return <CitizenScienceLab />;
+    }
+
+    if (activeTab === 'lighting-reporter') {
+      return <LightingReporter />;
+    }
+
+    if (activeTab === 'energy-impact') {
+      return <EnergyImpactAnalyzer />;
+    }
+
+    if (activeTab === 'wildlife-impact') {
+      return <WildlifeImpactMap />;
+    }
+
+    if (activeTab === 'night-forecast') {
+      return <NightSkyForecast />;
+    }
+
     return (
       <section className="mx-auto flex min-h-[calc(100vh-154px)] w-full max-w-7xl flex-col gap-4 lg:flex-row">
         <div className="glass-panel panel-hover min-h-[58vh] flex-1 overflow-hidden rounded-2xl">
@@ -151,18 +147,6 @@ function App() {
             selectedYear={selectedYear}
             loadingLocation={loading}
             locationError={error}
-          />
-          <GeminiInsights
-            userPosition={position}
-            selectedYear={selectedYear}
-            restoreNightMode={restoreNightMode}
-            selectedLocationOverride={selectedLocationOverride}
-          />
-          <HistoricalTimelineSlider
-            selectedYear={selectedYear}
-            onYearChange={setSelectedYear}
-            minYear={MIN_YEAR}
-            maxYear={MAX_YEAR}
           />
         </aside>
       </section>

@@ -10,7 +10,7 @@ export default function LightPollutionPage({ references = DEFAULT_REFERENCES }) 
     <article className="light-blog-page">
       <header className="light-blog-hero">
         <p className="light-blog-kicker">Light Pollution Research</p>
-        <h1>Light Pollution</h1>
+        <h1>The Science</h1>
         <p>
           A practical overview of how artificial light at night affects astronomy, ecosystems, public health, and
           energy use, plus the most effective prevention strategies.

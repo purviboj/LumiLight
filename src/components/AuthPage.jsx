@@ -3,6 +3,12 @@ import { login, signUp } from '../services/authService.js';
 
 function toFriendlyMessage(error) {
   const code = error?.code || '';
+  if (code === 'firebase/not-configured') {
+    return 'Firebase is not configured. Add your VITE_FIREBASE_* keys to a .env file and restart the dev server.';
+  }
+  if (code === 'firebase/auth-unavailable') {
+    return 'Firebase authentication is unavailable right now. Please try again later.';
+  }
   if (code === 'auth/invalid-email') return 'Enter a valid email address.';
   if (code === 'auth/user-not-found') return 'No account found for this email.';
   if (code === 'auth/wrong-password' || code === 'auth/invalid-credential') return 'Invalid email or password.';
